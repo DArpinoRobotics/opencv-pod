@@ -1,0 +1,11 @@
+Add -L in .pc so that PKG_CONFIG_OVERRIDE works.
+
+--- opencv/cmake/templates/opencv-XXX.pc.cmake.in~	2012-10-07 11:20:25.940878490 -0400
++++ opencv/cmake/templates/opencv-XXX.pc.cmake.in	2012-10-07 10:51:35.640834185 -0400
+@@ -9,5 +9,5 @@
+ Name: OpenCV
+ Description: Open Source Computer Vision Library
+ Version: @VERSION@
+-Libs: @OpenCV_LIB_COMPONENTS@
++Libs: -L${libdir} @OpenCV_LIB_COMPONENTS@
+ Cflags: -I${includedir_old} -I${includedir_new}
