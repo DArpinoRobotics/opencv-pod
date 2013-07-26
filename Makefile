@@ -50,7 +50,7 @@ endif
 
 	# run CMake to generate and configure the build scripts
 	@cd pod-build && cmake -DCMAKE_INSTALL_PREFIX=$(BUILD_PREFIX) \
-		-DWITH_FFMPEG=FALSE -DWITH_GSTREAMER=FALSE \
+		-DWITH_GSTREAMER=FALSE \
 		-DCMAKE_BUILD_TYPE=$(BUILD_TYPE) ../$(CHECKOUT_DIR)
 		   
 $(CHECKOUT_DIR)/CMakeLists.txt:
